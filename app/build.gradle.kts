@@ -49,9 +49,12 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
 
     implementation(libs.auth0)
+
+    implementation(libs.kotlinx.coroutines.play.services)
 
     implementation(libs.androidx.camera.core)
     implementation(libs.androidx.camera.camera2)
