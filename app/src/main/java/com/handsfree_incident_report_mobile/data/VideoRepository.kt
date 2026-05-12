@@ -38,6 +38,9 @@ import javax.crypto.spec.PSource
 import javax.crypto.spec.SecretKeySpec
 import javax.net.ssl.HttpsURLConnection
 import java.net.HttpURLConnection
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import java.util.concurrent.Executors
 
 class VideoRepository(
@@ -132,12 +135,15 @@ class VideoRepository(
         location: android.location.Location,
         orientation: DeviceOrientation,
     ) = withContext(Dispatchers.IO) {
+        val createdAt = SimpleDateFormat("dd.MM.yy", Locale("de", "CH")).format(Date())
+
         val requestBody = MultipartBody.Builder()
             .setType(MultipartBody.FORM)
             .addFormDataPart("encrypted_session_key", data.encryptedSessionKey)
             .addFormDataPart("latitude", location.latitude.toString())
             .addFormDataPart("longitude", location.longitude.toString())
             .addFormDataPart("orientation", orientation.headingDegrees.toString())
+            .addFormDataPart("created_at", createdAt)
             .addFormDataPart(
                 "encrypted_video",
                 "video.enc",
