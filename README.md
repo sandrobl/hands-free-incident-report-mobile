@@ -25,6 +25,29 @@ Permissions and manifest
 	- `INTERNET`, `CAMERA`, `RECORD_AUDIO`, `ACCESS_COARSE_LOCATION`, `ACCESS_FINE_LOCATION`, plus read/write external storage entries.
 - Main launcher activity: `.ui.MainActivity`.
 
+External dependencies
+- Build tooling: `com.android.application` Gradle plugin `9.1.0`.
+- Runtime: `androidx.core:core-ktx` `1.10.1`.
+- Runtime: `androidx.appcompat:appcompat` `1.6.1`.
+- Runtime: `com.google.android.material:material` `1.10.0`.
+- Runtime: `androidx.constraintlayout:constraintlayout` `2.1.4`.
+- Runtime: `androidx.navigation:navigation-fragment-ktx` `2.6.0`.
+- Runtime: `androidx.navigation:navigation-ui-ktx` `2.6.0`.
+- Runtime: `com.google.android.gms:play-services-location` `21.3.0`.
+- Runtime: `androidx.navigation:navigation-fragment-ktx` `2.9.8`.
+- Runtime: `androidx.navigation:navigation-ui-ktx` `2.9.8`.
+- Runtime: `com.auth0.android:auth0` `3.14.0`.
+- Runtime: `org.jetbrains.kotlinx:kotlinx-coroutines-play-services` `1.7.3`.
+- Runtime: `androidx.camera:camera-core` `1.5.3`.
+- Runtime: `androidx.camera:camera-camera2` `1.5.3`.
+- Runtime: `androidx.camera:camera-lifecycle` `1.5.3`.
+- Runtime: `androidx.camera:camera-video` `1.5.3`.
+- Runtime: `androidx.camera:camera-view` `1.5.3`.
+- Runtime: `androidx.camera:camera-extensions` `1.5.3`.
+- Test: `junit:junit` `4.13.2`.
+- Android test: `androidx.test.ext:junit` `1.1.5`.
+- Android test: `androidx.test.espresso:espresso-core` `3.5.1`.
+
 Build and run (local)
 Prerequisites: Android SDK (matching compile/target), JDK 8 compatibility as configured in the Gradle file.
 
